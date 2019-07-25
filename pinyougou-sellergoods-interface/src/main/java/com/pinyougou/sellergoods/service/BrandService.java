@@ -1,9 +1,11 @@
 package com.pinyougou.sellergoods.service;
 
 import java.util.List;
+import java.util.Map;
 
-import com.pinyougou.bean.PageBean;
 import com.pinyougou.pojo.TbBrand;
+
+import entity.PageResults;
 
 /**
  * 品牌接口
@@ -15,6 +17,18 @@ public interface BrandService {
 	
 	List<TbBrand> findAll();
 	
-	PageBean findPaging(int pageNum, int pageSize);
+	PageResults findPaging(int pageNum, int pageSize);
+	
+	void addTbBrand(TbBrand tbBrand);
+	
+	TbBrand findOneTbBrandById(long tbBrandId);
+	
+	void updateTbBrand(TbBrand tbBrand);
+	
+	void deleteTbBrandByIds(long[] ids);
+	
+	PageResults findPaging(TbBrand tbBrand,int pageNum, int pageSize);
+	
+	List<Map> selectOptionList();
 
 }

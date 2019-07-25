@@ -1,0 +1,1 @@
+var app=angular.module("app",["pagination"]);//品牌模块
